@@ -40,6 +40,7 @@ private:
     queue<int> seq2;
     int seq2_l; 
 
+    stack<int> same_num; 
     align_t target; 
     align_t soln; 
 public:
@@ -50,8 +51,11 @@ public:
     void addSequence_1(float);
     void addSequence_2(float); 
     void addTarget(float); 
-    void CalculateScore(align_t, align_t);
+    int CalculateScore(align_t, align_t);
+    void combineSequence(align_t); 
+    void MaxAlignment(int index); 
     void printAll();
+    void printMax(); 
 };
 
 

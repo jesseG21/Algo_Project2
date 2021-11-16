@@ -4,8 +4,7 @@
 /*
 Read the data from input file and calculate the alignment score
 */
-//Global Map of solutions
-unordered_map<int,align_t> seq_soln; 
+
 int main(){
     ifstream in; 
     Alignment align; 
@@ -55,8 +54,12 @@ int main(){
         }
     }
     
-    align.printAll(); 
-    
+    //calls function to calculate the max alignment score
+    align.MaxAlignment(0);  
+    //align.printAll();
+    //puts("");puts(""); 
+    //align.printAll();
+
     in.close(); 
     return 0; 
 }
